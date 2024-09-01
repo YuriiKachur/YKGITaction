@@ -57,5 +57,3 @@ jobs:
       - name: Test application
         run: 'mvn test'
       
-      - name: Run the selected script
-        run: ./${{ github.event.inputs.script_name }}
