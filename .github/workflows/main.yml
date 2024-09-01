@@ -2,7 +2,7 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions
 on:
   push:
-  workflow_dispatch:  # Добавлен триггер для ручного запуска
+  workflow_dispatch:
 
 jobs:
   Explore-GitHub-Actions:
@@ -33,11 +33,6 @@ jobs:
       - name: Show Java version
         run: "java -version"
       
-      - name: Run the scripts
-        run: |
-          ./my-script.sh
-          ./my-other-script.sh
-      
       - name: Show directory
         run: 'pwd'
       
@@ -52,3 +47,8 @@ jobs:
       
       - name: Test application
         run: 'mvn test'
+      
+      - name: Run the scripts
+        run: |
+          ./my-script.sh
+          ./my-other-script.sh
