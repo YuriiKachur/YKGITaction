@@ -11,7 +11,7 @@ jobs:
       - run: echo "This job is now running on a ${{ runner.os }}server hosted by GitHub!"
       - run: echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository}}."
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3 
       - run: echo "The ${{ github.repository }}repository has been cloned to the runner."
       - run: echo "The workflow is nowready to test your code on the runner."
       - name: List files in the repository
@@ -21,8 +21,11 @@ jobs:
       - name: Set up JDK 17
         run: actions/setup-java@v3
       - name: Show Java version
-        run: "java -version"
-      - name: Checkout code   
+        run: "java -version" 
+      - name: Run a script
+        run: ./my-script.sh
+      - name: Run another script
+        run: ./my-other-script.shs
       - name: Show directory
         run: 'pwd'
       - name: List files
