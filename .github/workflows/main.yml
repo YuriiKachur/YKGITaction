@@ -58,4 +58,4 @@ jobs:
         run: 'mvn test'
       
       - name: Run the selected script
-        run: ./$(echo "${{ github.event.inputs.script_name }}")
+        run: ./${{ github.event.inputs.script_name }}
