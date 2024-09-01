@@ -33,11 +33,10 @@ jobs:
       - name: Show Java version
         run: "java -version"
       
-      - name: Run a script
-        run: ./my-script.sh
-      
-      - name: Run another script
-        run: ./my-other-script.sh
+      - name: Run the scripts
+        run: |
+          ./my-script.sh
+          ./my-other-script.sh
       
       - name: Show directory
         run: 'pwd'
