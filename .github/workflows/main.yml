@@ -22,6 +22,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '20'
+          distribution: 'temurin'
       - name: Show Java version
         run: "java -version" 
       - name: Run a script
